@@ -1,0 +1,9 @@
+services:
+  news-generator:
+    image: news_generator
+    build: .
+    ports:
+      - "8082:8082"
+    volumes:
+      - .:/app
+    command: python main.py
